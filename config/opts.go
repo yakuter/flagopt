@@ -12,7 +12,7 @@ import (
 var usageStr = `
 Usage: flagopt [options]
 Options:
-    -n, --name <name>       Your full name. Ex: John Doe
+    -n, --name <name>       Your name. Ex: John
     -e, --email <email>     Your email address. Ex: john@doe.com
     -a, --age <age>         Your age. Ex: 26
     -m, --mask <mask>	    (Default False) Do you wear mask? Ex: true
@@ -50,7 +50,7 @@ func ConfigureOptions(fs *flag.FlagSet, args []string) (*Options, error) {
 	opts := &Options{}
 
 	// Define flags
-	fs.StringVar(&opts.Name, "n", "", "Your full name. Ex: John Doe")
+	fs.StringVar(&opts.Name, "n", "", "Your name. Ex: John")
 	fs.StringVar(&opts.Name, "name", "", "Your full name. Ex: John Doe")
 	fs.StringVar(&opts.Email, "e", "", "Your email address. Ex: john@doe.com")
 	fs.StringVar(&opts.Email, "email", "", "Your email address. Ex: john@doe.com")
