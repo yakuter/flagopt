@@ -12,10 +12,10 @@ import (
 var usageStr = `
 Usage: flagopt [options]
 Options:
-    -n, --name <name>       Your name. Ex: John
-    -e, --email <email>     Your email address. Ex: john@doe.com
-    -a, --age <age>         Your age. Ex: 26
-    -m, --mask <mask>	    (Default False) Do you wear mask? Ex: true
+    -n, --name <name>       Your name. i.e. John
+    -e, --email <email>     Your email address. i.e. john@doe.com
+    -a, --age <age>         Your age. i.e. 26
+    -m, --mask <mask>	    (Default False) Do you wear mask? i.e. true
     -h, --help              (Optional) Show help message
 `
 
@@ -50,14 +50,14 @@ func ConfigureOptions(fs *flag.FlagSet, args []string) (*Options, error) {
 	opts := &Options{}
 
 	// Define flags
-	fs.StringVar(&opts.Name, "n", "", "Your name. Ex: John")
-	fs.StringVar(&opts.Name, "name", "", "Your full name. Ex: John Doe")
-	fs.StringVar(&opts.Email, "e", "", "Your email address. Ex: john@doe.com")
-	fs.StringVar(&opts.Email, "email", "", "Your email address. Ex: john@doe.com")
-	fs.IntVar(&opts.Age, "a", 0, "Your age. Ex: 26")
-	fs.IntVar(&opts.Age, "age", 0, "Your age. Ex: 26")
-	fs.BoolVar(&opts.Mask, "m", false, "Do you wear mask? Ex: True")
-	fs.BoolVar(&opts.Mask, "mask", false, "Do you wear mask? Ex: True")
+	fs.StringVar(&opts.Name, "n", "", "Your name. i.e. John")
+	fs.StringVar(&opts.Name, "name", "", "Your full name. i.e. John Doe")
+	fs.StringVar(&opts.Email, "e", "", "Your email address. i.e. john@doe.com")
+	fs.StringVar(&opts.Email, "email", "", "Your email address. i.e. john@doe.com")
+	fs.IntVar(&opts.Age, "a", 0, "Your age. i.e. 26")
+	fs.IntVar(&opts.Age, "age", 0, "Your age. i.e. 26")
+	fs.BoolVar(&opts.Mask, "m", false, "Do you wear mask? i.e. True")
+	fs.BoolVar(&opts.Mask, "mask", false, "Do you wear mask? i.e. True")
 	fs.BoolVar(&opts.ShowHelp, "h", false, "Show help message")
 	fs.BoolVar(&opts.ShowHelp, "help", false, "Show help message")
 
