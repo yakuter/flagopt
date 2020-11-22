@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
 	"os"
@@ -24,5 +25,8 @@ func main() {
 		config.PrintHelpAndDie()
 	}
 
-	fmt.Println(opts)
+	// This part is just to show/debug options
+	result, _ := json.MarshalIndent(opts, "", " ")
+	fmt.Println(string(result))
+
 }
